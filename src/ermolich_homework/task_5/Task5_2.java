@@ -11,17 +11,29 @@ public class Task5_2 {
             int b=in.nextInt();
 
             int sum = 0;
+            int min,max;
 
-            if (a>0 & b>0) {
-                a++;
-                while (a<b) {
-                    sum+=a;
-                    a++;
+            if (a<b) {
+                min = a;
+                max = b;
+            } else {
+                max = a;
+                min = b;
+            }
+
+            if (min>0 & max>0) {
+                min++;
+                while (min<max) {
+
+                    sum+=min;
+                    min++;
                 }
+            }
+            else System.out.println("числа должны быть положительными");
+
             System.out.println("сумма чисел " + sum);
         }
-           else System.out.println("числа должны быть положительными");
 
         }
-    }
+
 

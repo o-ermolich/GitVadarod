@@ -5,33 +5,19 @@ import java.util.Scanner;
 public class Task5_3 {
     public static void main(String[] args) {
 
-        Scanner in=new Scanner(System.in);
+        int i;
+
+        Scanner in = new Scanner(System.in);
         System.out.println("Введите a");
-        int a=in.nextInt();
-        System.out.println("Введите b");
-        int b=in.nextInt();
+        int a = in.nextInt();
 
-        int sum = 0;
-        int min,max;
-
-        if (a<b) {
-            min = a;
-            max = b;
-        } else {
-            max = a;
-            min = b;
-        }
-
-        if (min>0 & max>0) {
-            min++;
-            while (min<max) {
-
-                sum+=min;
-                min++;
+        if (a % 10 == 0) System.out.println("Число не должно заканчиваться на 0");
+        else {
+            while (a > 0) {
+                i = a % 10;
+                a/=10;
+                System.out.print(i);
             }
         }
-        else System.out.println("числа должны быть положительными");
-
-        System.out.println("сумма чисел " + sum);
     }
 }
