@@ -36,4 +36,34 @@ public class Dog extends Animal{
         String info = " имя: " + name + " порода: " + breed + " максимальный вес: " + breed + super.info();
         return info;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Dog)) {
+            return false;
+        }
+        Dog dog = (Dog) obj;
+        if (name.equals(dog.getName()) && breed.equals(dog.getBreed()) && weight == dog.getWeight()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (name.hashCode() + breed.hashCode() + weight);
+        return result;
+    }
 }

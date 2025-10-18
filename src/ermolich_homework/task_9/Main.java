@@ -22,9 +22,11 @@ public class Main {
         Dog dog1 = new Dog("серый", 3, "корм", "Оливия", "болонка", 3.7);
         Dog dog2 = new Dog("чёрно-белый", 7, "рыба", "Лайма", "ротвейлер", 40);
         Dog dog3 = new Dog("черепаховый", 14, "всё", "Толик", "пудель", 5.5);
+        Dog dog4 = new Dog("чёрно-белый", 7, "рыба", "Лайма", "ротвейлер", 40);
         Bird bird1 = new Bird(70, "удод", "пёстрый", 7, "зерно");
         Bird bird2 = new Bird(130, "дрозд", "чёрный", 8, "насекомые");
         Bird bird3 = new Bird(70, "соловей", "серый", 6, "кукуруза");
+        Bird bird4 = new Bird(70, "соловей", "серый", 6, "кукуруза");
 
         zoo.addAnimal(dog1);
         zoo.addAnimal(dog2);
@@ -43,5 +45,17 @@ public class Main {
                 //  System.out.println();
             }
             System.out.println();}
+
+        System.out.println(dog1.equals(dog2));
+        System.out.println(dog2.equals(dog4));
+        System.out.println(bird4.equals(bird3));
+        System.out.println(bird3.equals(bird2));
+
+        System.out.println(dog2.hashCode());
+        System.out.println(dog4.hashCode());
+        System.out.println(dog3.hashCode());
+        System.out.println(bird3.hashCode());
+        System.out.println(bird4.hashCode());
+        System.out.println(bird1.hashCode());
     }
 }

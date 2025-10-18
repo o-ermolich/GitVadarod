@@ -27,4 +27,30 @@ public class Bird extends Animal{
         return info;
 
     }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public int getMaxHeight() {
+        return maxHeight;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Bird)) {
+            return false;
+        }
+        Bird bird = (Bird) obj;
+        if (family.equals(bird.getFamily()) && maxHeight == bird.getMaxHeight()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (family.hashCode() + maxHeight);
+        return result;
+    }
 }
