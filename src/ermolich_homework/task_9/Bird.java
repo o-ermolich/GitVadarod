@@ -41,6 +41,9 @@ public class Bird extends Animal{
         if (!(obj instanceof Bird)) {
             return false;
         }
+        if (!super.equals(obj)) {
+            return false;
+        }
         Bird bird = (Bird) obj;
         if (family.equals(bird.getFamily()) && maxHeight == bird.getMaxHeight()) {
             return true;

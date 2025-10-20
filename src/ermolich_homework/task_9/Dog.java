@@ -54,6 +54,9 @@ public class Dog extends Animal{
         if (!(obj instanceof Dog)) {
             return false;
         }
+        if (!super.equals(obj)) {
+            return false;
+        }
         Dog dog = (Dog) obj;
         if (name.equals(dog.getName()) && breed.equals(dog.getBreed()) && weight == dog.getWeight()) {
             return true;

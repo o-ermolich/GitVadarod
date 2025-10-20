@@ -12,7 +12,7 @@ public class Animal {
         this.food = food;
     }
 
-    public void Sound(){
+    public void Sound() {
         System.out.println("издание звуков");
     }
 
@@ -24,4 +24,29 @@ public class Animal {
         String info = " цвет: " + color + " макс. возраст: " + maxYear + " еда: " + food;
         return info;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getMaxYear() {
+        return maxYear;
+    }
+
+    public String getFood() {
+        return food;
+    }
+
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Animal)) {
+            return false;
+        }
+        Animal animal = (Animal) obj;
+        if (color.equals(animal.getColor()) && maxYear == animal.getMaxYear() && food.equals(animal.getFood())) {
+            return true;
+        }
+        return false;
+    }
 }
+
+
