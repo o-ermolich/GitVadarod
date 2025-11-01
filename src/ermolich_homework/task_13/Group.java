@@ -50,7 +50,6 @@ public class Group {
     }
 
 
-    // Метод для перевода студентов в другую группу
     public void transferToGroup(Group newGroup) {
         if (students.size() < 2) {
             newGroup.students.addAll(students);
@@ -58,17 +57,16 @@ public class Group {
         }
     }
 
-    // Метод для подсчета среднего балла по группе
     public double calculateAverageMark() {
         if (students.isEmpty()) {
-            return 0.0; // Если группа пуста, возвращаем 0
+            return 0.0;
         }
 
-        double total = 0.0; // Сумма всех баллов
+        double total = 0.0;
         for (Student student : students) {
-            total += student.getAvgMark(); // Добавляем балл каждого студента
+            total += student.getAvgMark();
         }
 
-        return total / students.size(); // Возвращаем среднее значение
+        return total / students.size();
     }
 }
