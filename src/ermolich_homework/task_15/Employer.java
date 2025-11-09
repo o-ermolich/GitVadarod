@@ -53,6 +53,6 @@ public class Employer {
     @Override
     public String toString() {
         return "name='" + name + '\'' +
-                ", lastName='" + lastName;
+                ", lastName='" + lastName + '\'';
     }
 }
